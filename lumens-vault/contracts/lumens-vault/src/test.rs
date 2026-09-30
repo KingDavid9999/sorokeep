@@ -637,6 +637,7 @@ fn test_deposit_one_above_max_lock_ledgers_fails() {
         &(BOUNDARY_MAX_LOCK + 1),
     );
     assert_eq!(res, Err(Ok(Error::InvalidLockPeriod)));
+}
 // Withdraw ordering (#837 / E05-15).
 //
 // DELIBERATE ORDERING: `withdraw` writes the decremented vault balance to
